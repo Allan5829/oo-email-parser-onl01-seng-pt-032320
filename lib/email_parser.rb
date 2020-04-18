@@ -10,7 +10,7 @@ class EmailAddressParser
     split_emails = []
     parsed_emails = []
     split_emails = @email_addresses.split.collect { |email| email.split(",")}
-    parsed_emails = split_emails.
+    parsed_emails = split_emails.flatten.uniq
   end 
   
 end 

@@ -11,7 +11,7 @@ class EmailAddressParser
   end 
   
   def parse
-    
+    split_emails = []
   end 
   
 end 

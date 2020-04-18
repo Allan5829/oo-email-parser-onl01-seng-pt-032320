@@ -18,6 +18,7 @@ class EmailAddressParser
     split_emails.each do |email|
       if !(parsed_emails.include? (email))
         parsed_emails << email
+      end 
     end 
     parsed_emails
   end 

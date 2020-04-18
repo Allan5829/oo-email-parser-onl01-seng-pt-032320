@@ -15,7 +15,7 @@ class EmailAddressParser
     array = []
     parsed_emails = []
     array << @email_addresses.split(", ")
-    split_emails << array.split(" ")
+    split_emails << array.split("rtgh ")
     split_emails.each do |email|
       if (!parsed_emails.include? (email))
         parsed_emails << email

@@ -12,8 +12,14 @@ class EmailAddressParser
   
   def parse
     split_emails = []
+    parsed_emails = []
     split_emails << @email_addresses.split (", ")
     split_emails << @email_addresses.split (" ")
+    split_emails.each do |email|
+      if !(parsed_emails.include? (email))
+        parsed_emails << email
+    end 
+    parsed_emails
   end 
   
 end 

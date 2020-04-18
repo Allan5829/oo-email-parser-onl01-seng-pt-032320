@@ -13,10 +13,20 @@ class EmailAddressParser
   def parse
     split_emails = []
     temp_array = []
+    temp_array2 = []
     parsed_emails = []
     temp_array << @email_addresses.split(", ")
     temp_array << @email_addresses.split(" ")
-    split_emails.each do |email|
+    temp_array.each do |email|
+      if (email.include? (", "))
+        temp_array2 << email.split(", ")
+      elsif (email.include? (" "))
+        temp_array2 << email.split(" ")
+      else 
+        temp_array2 << email
+      end 
+    end 
+    temp_array2.each do |email|
       if (!parsed_emails.include? (email))
         parsed_emails << email
       end 
